@@ -11,11 +11,14 @@ import UIKit
 class RecipesTableViewController: UITableViewController {
     
     // MARK: Constants
+    
     var recipes: [Recipe] = [] {
         didSet{
             tableView.reloadData()
         }
     }
+    
+    // MARK: Overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()

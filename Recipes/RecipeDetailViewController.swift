@@ -10,11 +10,14 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController {
 
+    // MARK: Constants
     var recipe: Recipe? {
         didSet{
             updateViews()
         }
     }
+    
+    // MARK: Outlets
     
     @IBOutlet var textView: UITextView!
     @IBOutlet var titleLbl: UILabel!
@@ -24,20 +27,11 @@ class RecipeDetailViewController: UIViewController {
         updateViews()
     }
     
+    // MARK: Functions
+    
     func updateViews(){
         guard let myRecipe = recipe, isViewLoaded else {return}
         titleLbl.text = myRecipe.name
         textView.text = myRecipe.instructions
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

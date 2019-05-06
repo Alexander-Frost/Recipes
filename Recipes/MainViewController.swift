@@ -29,9 +29,11 @@ class MainViewController: UIViewController {
     }
     
     // MARK: Outlets
+    
     @IBOutlet var textField: UITextField!
     
     // MARK: Actions
+    
     @IBAction func textFieldEndAction(_ sender: UITextField) {
         sender.resignFirstResponder()
         filterRecipes()
@@ -51,6 +53,8 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: Functions
     
     private func filterRecipes(){
         guard let searchTerm = textField.text, searchTerm.count > 0 else {
