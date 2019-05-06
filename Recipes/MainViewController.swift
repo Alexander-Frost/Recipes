@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     // MARK: Constants
+    
     private let networkClient = RecipesNetworkClient()
     var allRecipes: [Recipe] = [] {
         didSet{

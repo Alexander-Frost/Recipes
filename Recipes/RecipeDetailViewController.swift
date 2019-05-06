@@ -33,5 +33,6 @@ class RecipeDetailViewController: UIViewController {
         guard let myRecipe = recipe, isViewLoaded else {return}
         titleLbl.text = myRecipe.name
         textView.text = myRecipe.instructions
+        
     }
 }
